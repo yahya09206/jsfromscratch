@@ -60,3 +60,7 @@ console.log(name + ' is a ' + age + ' year old ' + job + ' .Is he married? ' + i
 //Get data from console using prompt command and log it to console
 var lastName = prompt('What is the last name?');
 console.log(lastName);
+
+/* ---------------------------------------------- 
+				OPERATORS
+---------------------------------------------- */
