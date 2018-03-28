@@ -54,13 +54,49 @@ job = 'driver'
 //log complete sentence with new values given
 console.log(name + ' is a ' + age + ' year old ' + job + ' .Is he married? ' + isMarried + '.');
 
+
 /* ---------------------------------------------- 
-	PROMPT
+				PROMPT
 ---------------------------------------------- */
 //Get data from console using prompt command and log it to console
-var lastName = prompt('What is the last name?');
-console.log(lastName);
+//var lastName = prompt('What is the last name?');
+//console.log(lastName);
+
 
 /* ---------------------------------------------- 
 				OPERATORS
 ---------------------------------------------- */
+/*
+- Operators are used to make calculations
+- Precedence of operators still applies in javascript just like in regular math
+*/
+
+//calculate birthyear
+var now = 2016;
+var birthYear = now - 26;
+//mutate birthyear
+birthYear = now - 26 * 2;
+console.log(birthYear);
+
+
+/* ---------------------------------------------- 
+				IF/ELSE
+---------------------------------------------- */
+/*
+- Type of constrol structure
+- Controls the flow of your program
+- '===' strict comparison operator
+*/
+
+//create variables
+var name = 'John';
+var age = 26;
+var isMarried = 'no';
+
+//if else statement
+if (isMarried === 'yes') {
+	console.log(name + ' is married');
+}else{
+	//this statement will run because the above statemnt is false unless switched around
+	console.log(name + ' will hopefully marry soon');
+}
