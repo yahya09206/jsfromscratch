@@ -72,7 +72,7 @@ console.log(name + ' is a ' + age + ' year old ' + job + ' .Is he married? ' + i
 */
 
 //calculate birthyear
-var now = 2016;
+var now = 2017;
 var birthYear = now - 26;
 //mutate birthyear
 birthYear = now - 26 * 2;
@@ -137,7 +137,7 @@ if(age < 20){
 //switch statement
 var job = 'teacher';
 //prompt user for job
-job = prompt('What does john do?');
+// job = prompt('What does john do?');
 switch(job){
 	case 'teacher':
 		console.log('John teaches kids');
@@ -151,3 +151,51 @@ switch(job){
 	default:
 		console.log('John does something else.');
 }
+
+/* ---------------------------------------------- 
+				FUNCTIONS
+---------------------------------------------- */
+/*
+- Functions make code reusable resulting in cleaner code and avoiding repeition of code
+- A formula that is used multiple times across multiple lines can be compacted into a function
+-Function Skeleton
+	• function name of function(parameter){
+		write code here;
+		return statement;
+	  }
+	  call function
+	  functionname();
+-Functions can call other functions
+
+*/
+
+//function
+function calculateAge(yearOfBirth){
+	var age = 2017 - yearOfBirth;
+	return age;
+}
+//call function with year of birth inside parentheses aka parameter
+var ageJohn = calculateAge(1990);
+var ageMike = calculateAge(1995);
+var ageMary = calculateAge(2009);
+console.log(ageJohn);
+console.log(ageMike);
+console.log(ageMary);
+
+//Years until retirement function, can use multiple parameters
+function yearsUntilRetirement(name, year){
+	var age = calculateAge(year);
+	//calculate reitrement age
+	var retirement = 65 - age;
+	if(retirement >= 0){
+		console.log(name + ' retires' + ' in ' + retirement + ' years.');
+	}else{
+		console.log(name + ' is already retired.');
+	}
+}
+yearsUntilRetirement('John', 1990);
+yearsUntilRetirement('John', 1945);
+yearsUntilRetirement('John', 1967);
+
+
+
