@@ -153,7 +153,7 @@ switch(job){
 }
 
 /* ---------------------------------------------- 
-				FUNCTIONS
+		FUNCTIONS/EXPRESSIONS/STATEMENTS
 ---------------------------------------------- */
 /*
 - Functions make code reusable resulting in cleaner code and avoiding repeition of code
@@ -165,11 +165,17 @@ switch(job){
 	  }
 	  call function
 	  functionname();
+	 •Statement just performs an action.
 -Functions can call other functions
+-Function expression skeleton
+	•var somefun = function(par){
+		//code
+	}
+	•Produces a value.
 
 */
 
-//function
+//function statement
 function calculateAge(yearOfBirth){
 	var age = 2017 - yearOfBirth;
 	return age;
