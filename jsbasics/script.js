@@ -1,5 +1,7 @@
+/* ---------------------------------------------- 
+		VARIABLES AND DATA TYPES
+---------------------------------------------- */
 /*
-VARIABLES AND DATA TYPES
 - Variable is like a container in which we can store a valuable that can be used over and over again
 - There are 5 primitive data types(not objects)
 1. number: floating point numbers, for decimals and integers.
@@ -24,9 +26,7 @@ console.log(age);
 var fullAge = true; //true is the boolean datatype
 console.log(fullAge);
 
-/*
-VARIABLE MUTATATION AND TYPE COERCEION
-- 
 
-*/
-
+/* ---------------------------------------------- 
+	VARIABLE MUTATATION AND TYPE COERCEION
+---------------------------------------------- */
