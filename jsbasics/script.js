@@ -26,3 +26,37 @@ console.log(fullAge);
 /* ---------------------------------------------- 
 	VARIABLE MUTATATION AND TYPE COERCEION
 ---------------------------------------------- */
+/*
+- Type coercion is when javascript automatically converts two different datatypes into one based on which variable it has to convert
+- Can declare variable and not define its value immediately
+- Can declare more than one variable on a single line
+- Changine value of variable is called variable mutation. Don't have to use 'var' keyword again.
+*/
+
+var name = 'john';
+var age = 26;
+console.log(name + age); //using the '+' sign will combine the variables aka concatenation
+
+//declare multiple variables on one line and declare their values on seperate line
+var job, isMarried;
+//log variable that has no value will return 'undefined'
+console.log(job);
+
+//assign values to variables
+job = 'teacher';
+isMarried = false;
+//log complete sentence with values given
+console.log(name + ' is a ' + age + ' year old ' + job + ' .Is he married? ' + isMarried + '.');
+
+//change value of variables declared above aka mutation
+age = 'thirty six';
+job = 'driver'
+//log complete sentence with new values given
+console.log(name + ' is a ' + age + ' year old ' + job + ' .Is he married? ' + isMarried + '.');
+
+/* ---------------------------------------------- 
+	PROMPT
+---------------------------------------------- */
+//Get data from console using prompt command and log it to console
+var lastName = prompt('What is the last name?');
+console.log(lastName);
