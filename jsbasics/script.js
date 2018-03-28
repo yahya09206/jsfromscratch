@@ -11,17 +11,13 @@
 5. null: non existent at all.
 */
 
-
 //declare variable
 var name = 'john'; //john is a string data type because it is a word
-
 //write to console
 console.log(name); //use the name of the variable inside the parentheses 
-
 //declare a integer variable
 var age = 27; //age is the integer data type
 console.log(age);
-
 //boolean datatype
 var fullAge = true; //true is the boolean datatype
 console.log(fullAge);
