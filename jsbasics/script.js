@@ -136,14 +136,16 @@ if(age < 20){
 
 //switch statement
 var job = 'teacher';
+//prompt user for job
+job = prompt('What does john do?');
 switch(job){
-	case: 'teacher';
+	case 'teacher':
 		console.log('John teaches kids');
 		break;
-	case 'driver';
+	case 'driver':
 		console.log('John drives a cab in yonkers');
 		break;
-	case 'cop';
+	case 'cop':
 		console.log('John helps fight crime.');
 		break;
 	default:
