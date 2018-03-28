@@ -80,12 +80,13 @@ console.log(birthYear);
 
 
 /* ---------------------------------------------- 
-				IF/ELSE
+				IF/ELSE & SWITCH
 ---------------------------------------------- */
 /*
 - Type of constrol structure
 - Controls the flow of your program
 - '===' strict comparison operator
+- '==' does type coercion
 */
 
 //create variables
