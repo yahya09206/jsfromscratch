@@ -87,6 +87,7 @@ console.log(birthYear);
 - Controls the flow of your program
 - '===' strict comparison operator
 - '==' does type coercion
+- Tests to see whether a certain statement is true or false to determine what to do next in the program
 */
 
 //create variables
@@ -116,11 +117,35 @@ if (isMarried === 'yes') {
 /*
 - <> is a logic statement used within the if/else condition
 - boolean logic consists of && & || operators. Deals with true/false values
+-Examples of boolean logic outcomes
+	• AND(&&) => true if ALL are true
+	• OR(||) => true if ONE is true
+	• NOT(!) => inverts true/false value
+-switch statement makes checking different cases easier and shorter
 */
 
-var age = 16;
+//nested if/else statement
+var age = 25;
 if(age < 20){
 	console.log('John is a teenager');
+}else if(age > 20 && age < 30){
+	console.log('John is a young man');
 }else{
 	console.log('John is a man');
+}
+
+//switch statement
+var job = 'teacher';
+switch(job){
+	case: 'teacher';
+		console.log('John teaches kids');
+		break;
+	case 'driver';
+		console.log('John drives a cab in yonkers');
+		break;
+	case 'cop';
+		console.log('John helps fight crime.');
+		break;
+	default:
+		console.log('John does something else.');
 }
