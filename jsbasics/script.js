@@ -91,7 +91,7 @@ console.log(birthYear);
 //create variables
 var name = 'John';
 var age = 26;
-var isMarried = 'no';
+var isMarried = 'yes';
 
 //if else statement
 if (isMarried === 'yes') {
@@ -100,3 +100,11 @@ if (isMarried === 'yes') {
 	//this statement will run because the above statemnt is false unless switched around
 	console.log(name + ' will hopefully marry soon');
 }
+
+ //changed ismarried status to boolean
+ isMarried = false;
+ if(isMarried){
+ 	console.log('YES!');
+ }else{
+ 	console.log('NO!');
+ }
