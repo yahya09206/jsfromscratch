@@ -80,7 +80,7 @@ console.log(birthYear);
 
 
 /* ---------------------------------------------- 
-				IF/ELSE & SWITCH
+				IF/ELSE
 ---------------------------------------------- */
 /*
 - Type of constrol structure
@@ -109,3 +109,18 @@ if (isMarried === 'yes') {
  }else{
  	console.log('NO!');
  }
+
+/* ---------------------------------------------- 
+				BOOLEAN LOGIC & SWITCH
+---------------------------------------------- */
+/*
+- <> is a logic statement used within the if/else condition
+- boolean logic consists of && & || operators. Deals with true/false values
+*/
+
+var age = 16;
+if(age < 20){
+	console.log('John is a teenager');
+}else{
+	console.log('John is a man');
+}
