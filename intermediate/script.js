@@ -3,7 +3,7 @@
 ---------------------------------------------- */
 /*
 - Can call a function before it is executed
-- It only works for function declarations
+- It only works for function declarations & variables
 */
 
 //function declaration
@@ -22,3 +22,15 @@ retirement(1990);
 console.log(age);
 var age = 23;
 console.log(age);
+
+function foo(){
+	console.log(age);
+	var age = 65;
+	console.log(age);
+}
+foo();
+console.log(age);
+
+/* ---------------------------------------------- 
+			SCOPING AND SCOPE CHAIN
+---------------------------------------------- */
