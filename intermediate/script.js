@@ -34,3 +34,18 @@ console.log(age);
 /* ---------------------------------------------- 
 			SCOPING AND SCOPE CHAIN
 ---------------------------------------------- */
+/*
+- Answers question of where can we access a certain variable?
+- Each new function creates a scope
+- Lexical scoping is where something is written in the code
+*/
+
+/* ---------------------------------------------- 
+				THIS
+---------------------------------------------- */
+/*
+- Refers to object as a whole
+- Regular function call points to global object or window object === default
+- Method call: points to object that is calling the method
+- Not assigned a value until a function where it is defined is actually called
+*/
