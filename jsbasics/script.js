@@ -209,9 +209,33 @@ yearsUntilRetirement('John', 1967);
 ---------------------------------------------- */
 /*
 - Arrays act like a list to make things easier to go through
+- Zero index meaning it starts at 0,1,2,3...
+- Has built in functions that let you do different things with an array
 */
 
-//Construct an array of names
+//Construct an array of names bracket
 var names = ['John', 'Jane', 'Mark'];
 
+//construct array using 'new' keyword
+var years = new Array(1990, 1969, 1948);
 
+//log array to console
+console.log(names);
+//print array with a specific item chosen
+console.log(names[2]);
+//mutate array from position you choose
+names[1] = 'Ben';
+console.log(names);
+
+//mix data types within a single array
+var john = ['John', 'Smith', 1990, 'teacher', false];
+
+//function to add an element to end of array
+john.push('blue');
+//add element to beginning of array
+john.unshift('Mr.');
+//remove element from end of array and return the removed value. No value needed
+john.pop();
+//remove element from beginning of array
+john.shift();
+console.log(john);
