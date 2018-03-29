@@ -204,4 +204,14 @@ yearsUntilRetirement('John', 1945);
 yearsUntilRetirement('John', 1967);
 
 
+/* ---------------------------------------------- 
+					ARRAY
+---------------------------------------------- */
+/*
+- Arrays act like a list to make things easier to go through
+*/
+
+//Construct an array of names
+var names = ['John', 'Jane', 'Mark'];
+
 
