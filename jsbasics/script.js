@@ -240,7 +240,7 @@ john.pop();
 john.shift();
 console.log(john);
 //function that returns the position element that you choose. Used to find out if certain element is inside of array
-alert(john.indexOf('Smith'));
+// alert(john.indexOf('Smith'));
 
 //find out if john is a teacher
 if(john.indexOf('teacher') === -1){
@@ -251,6 +251,22 @@ if(john.indexOf('teacher') === -1){
 				OBJECTS AND PROPERTIES
 ---------------------------------------------- */
 /*
+- Allow you to group variables using key,value pairs
+- Retrieve elements but calling object name followed by '.' and the key that you want to use. This is also called 'dot' notation
+	• Use: john.keyName;
+- Another way is to use '[]' which is called bracket notation. Use: john['keyName'];
 */
+
+//declare object using object notation
+var john = {
+	//key  value
+	name: 'john',
+	lastName: 'Smith',
+	yearOfBirth: 1990,
+	job: 'teacher',
+	isMarried: false
+};
+//write object to console
+console.log(john);
 
 
