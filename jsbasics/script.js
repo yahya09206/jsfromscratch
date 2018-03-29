@@ -117,21 +117,21 @@ if (isMarried === 'yes') {
 /*
 - <> is a logic statement used within the if/else condition
 - boolean logic consists of && & || operators. Deals with true/false values
--Examples of boolean logic outcomes
+- Examples of boolean logic outcomes
 	• AND(&&) => true if ALL are true
 	• OR(||) => true if ONE is true
 	• NOT(!) => inverts true/false value
--switch statement makes checking different cases easier and shorter
+- switch statement makes checking different cases easier and shorter
 */
 
 //nested if/else statement
 var age = 25;
 if(age < 20){
 	console.log('John is a teenager');
-}else if(age > 20 && age < 30){
-	console.log('John is a young man');
-}else{
-	console.log('John is a man');
+	}else if(age > 20 && age < 30){
+		console.log('John is a young man');
+	}else{
+		console.log('John is a man');
 }
 
 //switch statement
