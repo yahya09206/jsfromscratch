@@ -290,10 +290,58 @@ jane['job'] = 'retired';
 jane.isMarried = true;
 console.log(jane);
 
+/* ---------------------------------------------- 
+				OBJECTS AND METHODS
+---------------------------------------------- */
+/*
+- Can use methods aka functions inside of objects
+- Call those methods the same way as you would a regular key 
+- 'this' refers to the object and then you can use whatever notation to for the value you want
+*/
+
+/* v1
+var john = {
+	//key  value
+	name: 'john',
+	lastName: 'Smith',
+	yearOfBirth: 1990,
+	job: 'teacher',
+	isMarried: false,
+	family: ['Jane', 'Mark', 'Bob'],
+	calculateAge: function(){
+		//return difference between 2017 - yearofbirth using 'this keyword'
+		return 2017 - this.yearOfBirth;
+	}
+};
+console.log(john.family[2]);
+//call function
+// console.log(john.calculateAge(1970));
+console.log(john.calculateAge());
+var age = john.calculateAge();
+john.age = age;
+console.log(john);
+*/
 
 
-
-
+//v2 will automatically store result inside of object
+var john = {
+	//key  value
+	name: 'john',
+	lastName: 'Smith',
+	yearOfBirth: 1990,
+	job: 'teacher',
+	isMarried: false,
+	family: ['Jane', 'Mark', 'Bob'],
+	calculateAge: function(){
+		//return difference between 2017 - yearofbirth using 'this keyword'
+		//return 2017 - this.yearOfBirth;
+		//store age inside of john object
+		this.age = 2017 - this.yearOfBirth;
+	}
+};
+//calculate age based on year of birth
+john.calculateAge();
+console.log(john);
 
 
 
