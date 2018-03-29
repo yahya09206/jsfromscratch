@@ -355,6 +355,9 @@ console.log(john);
 	• for(initialize; comparasion; iteration){do something}
 	• 0, true, print 0, update i to 1
 	• starts at 0
+- 'length' property will tell you how long the array is
+-While Loop is another way of counting items
+	• while condition is true, execute code inside of while loop
 */
 
 //for loop that counts to ten
@@ -364,9 +367,23 @@ for(var i = 0; i <= 10; i++){
 
 //create array and loop through it
 var names = ['John', 'Jane', 'Mary', 'Mark', 'Bob'];
-for(var i = 0; i < 5; i++){
+for(var i = 0; i < names.length; i++){
 	console.log(names[i]);
 }
+
+//count loop backwards
+for(var i = names.length - 1; i >= 0; i--){
+	console.log(names[i]);
+}
+
+//simple while loop
+var i = 0;
+while(i < names.length){
+	console.log(names[i]);
+	i++;
+}
+
+
 
 
 
