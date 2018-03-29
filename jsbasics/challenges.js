@@ -1,9 +1,8 @@
 /* ---------------------------------------------- 
 				CODING CHALLENGES
 ---------------------------------------------- */
-/*
-CHALLENGE 1
-*/
+
+/*CHALLENGE 1 */
 var johnHeight = 147;
 var friendHeight = 157;
 var johnAge = 25;
@@ -19,3 +18,5 @@ if (johnScore > friendScore) {
 }else{
 	console.log('Game ends in a draw!');
 }
+
+/*CHALLENGE 2 */

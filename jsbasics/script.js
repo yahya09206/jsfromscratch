@@ -358,6 +358,7 @@ console.log(john);
 - 'length' property will tell you how long the array is
 -While Loop is another way of counting items
 	• while condition is true, execute code inside of while loop
+-'break;' will exit the loop for you. Works with all types of loops
 */
 
 //for loop that counts to ten
