@@ -344,6 +344,22 @@ john.calculateAge();
 console.log(john);
 
 
+/* ---------------------------------------------- 
+				LOOPS AND ITERATION
+---------------------------------------------- */
+/*
+- Another type of control structure
+- Useful for repetitive tasks and for large numbers of items to go through
+	• i.e if you want to count to ten without hardcoding each individual number
+- For loop
+	•for(initialize; comparasion; iteration){do something}
+*/
+
+//for loop that counts to ten
+for(var i = 0; i <= 10; i++){
+	console.log(i);
+}
+
 
 
 
