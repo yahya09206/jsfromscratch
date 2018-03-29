@@ -49,3 +49,21 @@ console.log(age);
 - Method call: points to object that is calling the method
 - Not assigned a value until a function where it is defined is actually called
 */
+
+//console log the window object from browser
+// console.log(this);
+
+calculateAge(1985);
+function calculateAge(year){
+	console.log(2016 - year);
+	console.log(this);
+}
+
+var john = {
+	name: 'John',
+	yearOfBirth: 1990,
+	calculateAge: function(){
+		console.log(this);
+	}
+}
+john.calculateAge();
