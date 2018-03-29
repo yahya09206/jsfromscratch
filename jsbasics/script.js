@@ -239,3 +239,5 @@ john.pop();
 //remove element from beginning of array
 john.shift();
 console.log(john);
+//function that returns the position element that you choose. Used to find out if certain element is inside of array
+alert(john.indexOf('Smith'));
