@@ -266,7 +266,36 @@ var john = {
 	job: 'teacher',
 	isMarried: false
 };
-//write object to console
+//write object to console using dot notation
+console.log(john.lastName);
+//write object to console using bracket notation
+console.log(john['lastName']);
+
+//variable that has name of key we want to use
+var xyz = 'job';
+console.log(john[xyz]);
+
+//data mutation on objects is the same for arrays and objects
+//change johns last name
+john.lastName = 'Miller';
+john['job'] = 'programmer';
 console.log(john);
+
+//object use initialization with new keyword
+var jane = new Object();
+jane.name = 'jane';
+jane.lastName = 'smith';
+jane['yearOfBirth'] = 1969;
+jane['job'] = 'retired';
+jane.isMarried = true;
+console.log(jane);
+
+
+
+
+
+
+
+
 
 
