@@ -352,12 +352,20 @@ console.log(john);
 - Useful for repetitive tasks and for large numbers of items to go through
 	• i.e if you want to count to ten without hardcoding each individual number
 - For loop
-	•for(initialize; comparasion; iteration){do something}
+	• for(initialize; comparasion; iteration){do something}
+	• 0, true, print 0, update i to 1
+	• starts at 0
 */
 
 //for loop that counts to ten
 for(var i = 0; i <= 10; i++){
 	console.log(i);
+}
+
+//create array and loop through it
+var names = ['John', 'Jane', 'Mary', 'Mark', 'Bob'];
+for(var i = 0; i < 5; i++){
+	console.log(names[i]);
 }
 
 
