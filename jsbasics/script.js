@@ -228,7 +228,7 @@ names[1] = 'Ben';
 console.log(names);
 
 //mix data types within a single array
-var john = ['John', 'Smith', 1990, 'teacher', false];
+var john = ['John', 'Smith', 1990, 'designer', false];
 
 //function to add an element to end of array
 john.push('blue');
@@ -241,3 +241,10 @@ john.shift();
 console.log(john);
 //function that returns the position element that you choose. Used to find out if certain element is inside of array
 alert(john.indexOf('Smith'));
+
+//find out if john is a teacher
+if(john.indexOf('teacher') === -1){
+	console.log('John is NOT a teacher.');
+}
+
+
