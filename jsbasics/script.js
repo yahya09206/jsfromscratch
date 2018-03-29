@@ -247,4 +247,10 @@ if(john.indexOf('teacher') === -1){
 	console.log('John is NOT a teacher.');
 }
 
+/* ---------------------------------------------- 
+				OBJECTS AND PROPERTIES
+---------------------------------------------- */
+/*
+*/
+
 
