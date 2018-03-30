@@ -49,6 +49,13 @@ roundScore = 0;
 activePlayer = 1;
 //Can use querySelector to change css. Set display to none
 document.querySelector('.dice').style.display = 'none';
+
+//get element by ID name. Which is faster than query selector. Set all scores to 0
+document.getElementById('score-0').textContent = '0';
+document.getElementById('score-1').textContent = '0';
+document.getElementById('current-0').textContent = '0';
+document.getElementById('current-1').textContent = '0';
+
 //select button to roll the dice. 
 document.querySelector('.btn-roll').addEventListener('click', function() {
 	//1, Random number
