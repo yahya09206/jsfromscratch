@@ -45,53 +45,58 @@ GAME RULES:
 
 
 //create variables for the game
-var scores, roundScore, activePlayer, dice;
+var scores, roundScore, activePlayer, gamePlaying;
 //give variables their value
 init();
 //select button to roll the dice. 
 document.querySelector('.btn-roll').addEventListener('click', function() {
-	//1, Random number
-	//generate random number for dice roll 1-6 all real numbers using variable
-	var dice = Math.floor(Math.random() * 6) + 1;
-	// 2. Display correct dice number result
-	//create variable for selecting query to make it easier
-	var diceDOM = document.querySelector('.dice');
-	//add it to change the style of the dice to display
-	diceDOM.style.display = 'block';
-	//change image to match the dice roll
-	diceDOM.src = 'dice-' + dice + '.png';
-	// 3. Update round score IF the rolled number was NOT a 1
-	//use if statement to determine score based on dice roll
-	//if roll is >1 then add score to users points
-	if (dice !== 1) {
-		//add dice result to round score
-		roundScore += dice;
-		//display in user interface
-		document.querySelector('#current-' + activePlayer).textContent = roundScore;
-	}else{
-		//next player turn
-		nextPlayer();
+	if(gamePlaying){
+		//1, Random number
+		//generate random number for dice roll 1-6 all real numbers using variable
+		var dice = Math.floor(Math.random() * 6) + 1;
+		// 2. Display correct dice number result
+		//create variable for selecting query to make it easier
+		var diceDOM = document.querySelector('.dice');
+		//add it to change the style of the dice to display
+		diceDOM.style.display = 'block';
+		//change image to match the dice roll
+		diceDOM.src = 'dice-' + dice + '.png';
+		// 3. Update round score IF the rolled number was NOT a 1
+		//use if statement to determine score based on dice roll
+		//if roll is >1 then add score to users points
+		if (dice !== 1) {
+			//add dice result to round score
+			roundScore += dice;
+			//display in user interface
+			document.querySelector('#current-' + activePlayer).textContent = roundScore;
+		}else{
+			//next player turn
+			nextPlayer();
+		}
 	}
 });
 
 //Set up event listener for holding players score
 document.querySelector('.btn-hold').addEventListener('click', function(){
-	//add current score to players global score when player clicks hold button
-	scores[activePlayer] += roundScore;
-	//update UI for active player
-	document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
-	//check if player won the game
-	if(scores[activePlayer] >= 20){
-		//chenge css of active player name to winner
-		document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
-		//set display of dice back to none
-		document.querySelector('.dice').style.display = 'none';
-		//toggle winner
-		document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
-		//remove active class from player
-		document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
-	}else{
-		nextPlayer();
+	if (gamePlaying) {
+		//add current score to players global score when player clicks hold button
+		scores[activePlayer] += roundScore;
+		//update UI for active player
+		document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
+		//check if player won the game
+		if(scores[activePlayer] >= 20){
+			//chenge css of active player name to winner
+			document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
+			//set display of dice back to none
+			document.querySelector('.dice').style.display = 'none';
+			//toggle winner
+			document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
+			//remove active class from player
+			document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
+			gamePlaying = false;
+		}else{
+			nextPlayer();
+		}
 	}
 });
 
@@ -117,6 +122,7 @@ function init(){
 	scores = [0, 0];
 	activePlayer = 0;
 	roundScore = 0;
+	gamePlaying = true;
 	//Can use querySelector to change css. Set display to none
 	document.querySelector('.dice').style.display = 'none';
 	//get element by ID name. Which is faster than query selector. Set all scores to 0
