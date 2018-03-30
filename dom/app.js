@@ -124,10 +124,10 @@ function init(){
 	document.getElementById('score-1').textContent = '0';
 	document.getElementById('current-0').textContent = '0';
 	document.getElementById('current-1').textContent = '0';
+	//chenge css of active player name to defaults after new game is started
+	document.getElementById('name-0').textContent = 'Player 1';
+	document.getElementById('name-1').textContent = 'Player 2';
 }
 
 //function for starting new game
-document.querySelector('.btn-new').addEventListener('click', function(){
-	//reset player scores, rount turn and player turn
-	init();
-});
+document.querySelector('.btn-new').addEventListener('click', init);
