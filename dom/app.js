@@ -19,11 +19,6 @@ GAME RULES:
 - Make your pages interactive by maniupulating the dom
 - Change value of html inside of current score to italic
 	•document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
-- Read element from webpage
-	•var x = document.querySelector('#score-0').textContent;
-		console.log(x);
-- Can use querySelector to change css. Set display to none
-	•document.querySelector('.dice').style.display = 'none';
 */
 
 /* ---------------------------------------------- 
@@ -47,15 +42,20 @@ var scores, roundScore, activePlayer, dice;
 scores = [0,0];
 roundScore = 0;
 activePlayer = 1;
-console.log(dice);
 //access the dom using query selector which is either an ID or Class. Use textContent to change content of score
 document.querySelector('#current-' + activePlayer).textContent = dice;
+//Read element from webpage
+var x = document.querySelector('#score-0').textContent;
+console.log(x);
+//Can use querySelector to change css. Set display to none
+document.querySelector('.dice').style.display = 'none';
 //select button to roll the dice. 
 document.querySelector('.button-roll').addEventListener('click', function() {
 	//1, Random number
 	//generate random number for dice roll 1-6 all real numbers using variable
 	var dice = Math.floor(Math.random() * 6) + 1;
-	// 2. Display result
+	// 2. Display correct dice number result
+	document.querySelector('.dice').style.display = 'block';
 
 	// 3. Update round score IF the rolled number was not a 1
 
