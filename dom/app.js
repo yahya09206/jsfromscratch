@@ -84,7 +84,7 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
 		//update UI for active player
 		document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
 		//check if player won the game
-		if(scores[activePlayer] >= 20){
+		if(scores[activePlayer] >= 100){
 			//chenge css of active player name to winner
 			document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
 			//set display of dice back to none
