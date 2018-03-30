@@ -37,6 +37,9 @@ GAME RULES:
 	•The type of event and the function to call as soon as the event is called
 - A callback function is called by another function and not by the user
 - Anonymous function is a function that doesnt have a name and cant be reused
+- Remove/Add class to elements
+	• document.querySelector('.player-0-panel').classList.remove('active');
+	• document.querySelector('.player-1-panel').classList.add('active');
 */
 
 
@@ -62,7 +65,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 	//generate random number for dice roll 1-6 all real numbers using variable
 	var dice = Math.floor(Math.random() * 6) + 1;
 	// 2. Display correct dice number result
-	//create variable for selection
+	//create variable for selecting query to make it easier
 	var diceDOM = document.querySelector('.dice');
 	//add it to change the style of the dice to display
 	diceDOM.style.display = 'block';
@@ -80,6 +83,17 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 		//next player turn
 		//use ternary operator to switch from active player to other player
 		activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+		//set roundscore back to 0
+		roundScore = 0;
+		//set user score to 0 inside of user interface for both players
+		document.getElementById('current-0').textContent = '0';
+		document.getElementById('current-1').textContent = '0';
+		//switch active player class from one user to another by toggling
+		document.querySelector('.player-0-panel').classList.toggle('active');
+		document.querySelector('.player-1-panel').classList.toggle('active');
+		//remove dice from screen
+		document.querySelector('.dice').style.display = 'none';
+
 	}
 
 });
