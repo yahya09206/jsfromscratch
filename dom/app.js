@@ -127,6 +127,15 @@ function init(){
 	//chenge css of active player name to defaults after new game is started
 	document.getElementById('name-0').textContent = 'Player 1';
 	document.getElementById('name-1').textContent = 'Player 2';
+	//remove winner class
+	document.querySelector('.player-0-panel').classList.remove('winner');
+	document.querySelector('.player-1-panel').classList.remove('winner');
+	//remove active class
+	document.querySelector('.player-0-panel').classList.remove('active');
+	document.querySelector('.player-1-panel').classList.remove('active');
+	//add active class
+	document.querySelector('.player-0-panel').classList.add('active');
+
 }
 
 //function for starting new game
