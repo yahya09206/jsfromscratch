@@ -47,18 +47,7 @@ GAME RULES:
 //create variables for the game
 var scores, roundScore, activePlayer, dice;
 //give variables their value
-scores = [0,0];
-roundScore = 0;
-activePlayer = 0;
-//Can use querySelector to change css. Set display to none
-document.querySelector('.dice').style.display = 'none';
-
-//get element by ID name. Which is faster than query selector. Set all scores to 0
-document.getElementById('score-0').textContent = '0';
-document.getElementById('score-1').textContent = '0';
-document.getElementById('current-0').textContent = '0';
-document.getElementById('current-1').textContent = '0';
-
+init();
 //select button to roll the dice. 
 document.querySelector('.btn-roll').addEventListener('click', function() {
 	//1, Random number
@@ -123,10 +112,18 @@ function nextPlayer(){
 	document.querySelector('.dice').style.display = 'none';
 }
 
+//new game
 function init(){
 	scores = [0, 0];
 	activePlayer = 0;
 	roundScore = 0;
+	//Can use querySelector to change css. Set display to none
+	document.querySelector('.dice').style.display = 'none';
+	//get element by ID name. Which is faster than query selector. Set all scores to 0
+	document.getElementById('score-0').textContent = '0';
+	document.getElementById('score-1').textContent = '0';
+	document.getElementById('current-0').textContent = '0';
+	document.getElementById('current-1').textContent = '0';
 }
 
 //function for starting new game
