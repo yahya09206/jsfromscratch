@@ -27,4 +27,8 @@ roundScore = 0;
 activePlayer = 0;
 
 //generate random number for dice roll 1-6 all real numbers
-Math.floor(Math.random() * 6) + 1
+dice = Math.floor(Math.random() * 6) + 1;
+console.log(dice);
+
+//access the dom using query selector which is either an ID or Class. Use textContent to change content of score
+document.querySelector('#current-0').textContent = dice;
