@@ -39,14 +39,12 @@ GAME RULES:
 
 //create variables for the game
 var scores, roundScore, activePlayer, dice;
-
+//give variables their value
 scores = [0,0];
 roundScore = 0;
 activePlayer = 1;
-
 //generate random number for dice roll 1-6 all real numbers
 dice = Math.floor(Math.random() * 6) + 1;
 console.log(dice);
-
 //access the dom using query selector which is either an ID or Class. Use textContent to change content of score
 document.querySelector('#current-' + activePlayer).textContent = dice;
