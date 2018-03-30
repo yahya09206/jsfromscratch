@@ -97,10 +97,11 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 });
 
 //Set up event listener for holding players score
-document.querySelector('.button-hold').addEventListener('click', function(){
+document.querySelector('.btn-hold').addEventListener('click', function(){
 	//add current score to players global score when player clicks hold button
 	scores[activePlayer] += roundScore;
-	//update UI
+	//update UI for active player
+	document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
 
 	//check if player won the game
 });
