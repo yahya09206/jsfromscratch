@@ -81,18 +81,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 		document.querySelector('#current-' + activePlayer).textContent = roundScore;
 	}else{
 		//next player turn
-		//use ternary operator to switch from active player to other player
-		activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
-		//set roundscore back to 0
-		roundScore = 0;
-		//set user score to 0 inside of user interface for both players
-		document.getElementById('current-0').textContent = '0';
-		document.getElementById('current-1').textContent = '0';
-		//switch active player class from one user to another by toggling
-		document.querySelector('.player-0-panel').classList.toggle('active');
-		document.querySelector('.player-1-panel').classList.toggle('active');
-		//remove dice from screen
-		document.querySelector('.dice').style.display = 'none';
+		nextPlayer();
 	}
 });
 
@@ -102,6 +91,23 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
 	scores[activePlayer] += roundScore;
 	//update UI for active player
 	document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
-
 	//check if player won the game
+	nextPlayer();
 });
+
+//function for determining next player
+function nextPlayer(){
+//next player turn
+	//use ternary operator to switch from active player to other player
+	activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+	//set roundscore back to 0
+	roundScore = 0;
+	//set user score to 0 inside of user interface for both players
+	document.getElementById('current-0').textContent = '0';
+	document.getElementById('current-1').textContent = '0';
+	//switch active player class from one user to another by toggling
+	document.querySelector('.player-0-panel').classList.toggle('active');
+	document.querySelector('.player-1-panel').classList.toggle('active');
+	//remove dice from screen
+	document.querySelector('.dice').style.display = 'none';
+}
