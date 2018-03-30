@@ -101,7 +101,6 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
 		document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
 		//remove active class from player
 		document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
-
 	}else{
 		nextPlayer();
 	}
@@ -109,7 +108,7 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
 
 //function for determining next player
 function nextPlayer(){
-//next player turn
+	//next player turn
 	//use ternary operator to switch from active player to other player
 	activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
 	//set roundscore back to 0
@@ -123,3 +122,15 @@ function nextPlayer(){
 	//remove dice from screen
 	document.querySelector('.dice').style.display = 'none';
 }
+
+function init(){
+	scores = [0, 0];
+	activePlayer = 0;
+	roundScore = 0;
+}
+
+//function for starting new game
+document.querySelector('.btn-new').addEventListener('click', function(){
+	//reset player scores, rount turn and player turn
+	init();
+});
