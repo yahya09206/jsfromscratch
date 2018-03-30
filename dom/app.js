@@ -19,9 +19,12 @@ GAME RULES:
 - Make your pages interactive by maniupulating the dom
 */
 
-//create variable for scores, roundScore and active player
-var scores, roundScore, activePlayer;
+//create variables for the game
+var scores, roundScore, activePlayer, dice;
 
 scores = [0,0];
 roundScore = 0;
 activePlayer = 0;
+
+//generate random number for dice roll 1-6 all real numbers
+Math.floor(Math.random() * 6) + 1
