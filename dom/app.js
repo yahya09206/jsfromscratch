@@ -55,7 +55,10 @@ document.querySelector('.button-roll').addEventListener('click', function() {
 	//generate random number for dice roll 1-6 all real numbers using variable
 	var dice = Math.floor(Math.random() * 6) + 1;
 	// 2. Display correct dice number result
-	document.querySelector('.dice').style.display = 'block';
+	//create variable for selection
+	var diceDOM = document.querySelector('.dice');
+	diceDOM.style.display = 'block';
+	diceDOM
 
 	// 3. Update round score IF the rolled number was not a 1
 
