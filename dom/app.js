@@ -17,6 +17,13 @@ GAME RULES:
 - Used to connect webpages to scripts like javascript
 - Fully object oriented
 - Make your pages interactive by maniupulating the dom
+- Change value of html inside of current score to italic
+	•document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
+- Read element from webpage
+	•var x = document.querySelector('#score-0').textContent;
+		console.log(x);
+- Can use querySelector to change css. Set display to none
+	•document.querySelector('.dice').style.display = 'none';
 */
 
 //create variables for the game
@@ -24,11 +31,11 @@ var scores, roundScore, activePlayer, dice;
 
 scores = [0,0];
 roundScore = 0;
-activePlayer = 0;
+activePlayer = 1;
 
 //generate random number for dice roll 1-6 all real numbers
 dice = Math.floor(Math.random() * 6) + 1;
 console.log(dice);
 
 //access the dom using query selector which is either an ID or Class. Use textContent to change content of score
-document.querySelector('#current-0').textContent = dice;
+document.querySelector('#current-' + activePlayer).textContent = dice;
