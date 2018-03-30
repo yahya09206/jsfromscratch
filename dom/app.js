@@ -26,6 +26,17 @@ GAME RULES:
 	•document.querySelector('.dice').style.display = 'none';
 */
 
+/* ---------------------------------------------- 
+				EVENTS
+---------------------------------------------- */
+/*
+- Notifications that are sent to notify the code that something happened on the webpage
+	*for example clicking a button, resizzing a window, scolling down or pressing a key
+- Event listeners are functions that perform actions based on a certain event based on the execution stack
+*/
+
+
+
 //create variables for the game
 var scores, roundScore, activePlayer, dice;
 
