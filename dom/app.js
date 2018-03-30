@@ -8,3 +8,12 @@ GAME RULES:
 - The first player to reach 100 points on GLOBAL score wins the game
 
 */
+/* ---------------------------------------------- 
+				DOM
+---------------------------------------------- */
+/*
+- Document object model
+- Structured representation of an html document
+- Used to connect webpages to scripts like javascript
+- Fully object oriented
+*/
