@@ -16,4 +16,5 @@ GAME RULES:
 - Structured representation of an html document
 - Used to connect webpages to scripts like javascript
 - Fully object oriented
+- Make your pages interactive by maniupulating the dom
 */
