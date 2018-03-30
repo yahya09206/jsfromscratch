@@ -93,7 +93,14 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 		document.querySelector('.player-1-panel').classList.toggle('active');
 		//remove dice from screen
 		document.querySelector('.dice').style.display = 'none';
-
 	}
+});
 
+//Set up event listener for holding players score
+document.querySelector('.button-hold').addEventListener('click', function(){
+	//add current score to players global score when player clicks hold button
+	scores[activePlayer] += roundScore;
+	//update UI
+
+	//check if player won the game
 });
