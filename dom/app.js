@@ -98,8 +98,9 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
 		//set display of dice back to none
 		document.querySelector('.dice').style.display = 'none';
 		//toggle winner
-		document.querySelector('.player-' + activePlayer _ '-panel').classList.add('winner');
-		document.querySelector('.player-' + activePlayer _ '-panel').classList.remove('active');
+		document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
+		//remove active class from player
+		document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
 
 	}else{
 		nextPlayer();
