@@ -46,7 +46,7 @@ var scores, roundScore, activePlayer, dice;
 //give variables their value
 scores = [0,0];
 roundScore = 0;
-activePlayer = 1;
+activePlayer = 0;
 //Can use querySelector to change css. Set display to none
 document.querySelector('.dice').style.display = 'none';
 
@@ -71,8 +71,11 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 	// 3. Update round score IF the rolled number was NOT a 1
 	//use if statement to determine score based on dice roll
 	//if roll is >1 then add score to users points
-	if (dice > 1) {
-		//add score
+	if (dice !== 1) {
+		//add dice result to round score
+		roundScore += dice;
+		//display in user interface
+		document.querySelector('#current-' + activePlayer).textContent = roundScore;
 	}else{
 		//next player turn
 	}
