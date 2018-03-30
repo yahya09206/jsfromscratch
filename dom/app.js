@@ -18,3 +18,10 @@ GAME RULES:
 - Fully object oriented
 - Make your pages interactive by maniupulating the dom
 */
+
+//create variable for scores, roundScore and active player
+var scores, roundScore, activePlayer;
+
+scores = [0,0];
+roundScore = 0;
+activePlayer = 0;
