@@ -19,6 +19,11 @@ GAME RULES:
 - Make your pages interactive by maniupulating the dom
 - Change value of html inside of current score to italic
 	•document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
+-access the dom using query selector which is either an ID or Class. Use textContent to change content of score
+	•document.querySelector('#current-' + activePlayer).textContent = dice;
+- Read element from webpage
+	•var x = document.querySelector('#score-0').textContent;
+		console.log(x);
 */
 
 /* ---------------------------------------------- 
@@ -42,23 +47,20 @@ var scores, roundScore, activePlayer, dice;
 scores = [0,0];
 roundScore = 0;
 activePlayer = 1;
-//access the dom using query selector which is either an ID or Class. Use textContent to change content of score
-document.querySelector('#current-' + activePlayer).textContent = dice;
-//Read element from webpage
-var x = document.querySelector('#score-0').textContent;
-console.log(x);
 //Can use querySelector to change css. Set display to none
 document.querySelector('.dice').style.display = 'none';
 //select button to roll the dice. 
-document.querySelector('.button-roll').addEventListener('click', function() {
+document.querySelector('.btn-roll').addEventListener('click', function() {
 	//1, Random number
 	//generate random number for dice roll 1-6 all real numbers using variable
 	var dice = Math.floor(Math.random() * 6) + 1;
 	// 2. Display correct dice number result
 	//create variable for selection
 	var diceDOM = document.querySelector('.dice');
+	//add it to change the style of the dice to display
 	diceDOM.style.display = 'block';
-	diceDOM
+	//change image to match the dice roll
+	diceDOM.src = 'dice-' + dice + '.png';
 
 	// 3. Update round score IF the rolled number was not a 1
 
