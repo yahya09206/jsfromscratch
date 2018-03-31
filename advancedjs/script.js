@@ -101,8 +101,14 @@ function arrayCalc(arr, fn){
 function calculateAge(el){
 	return 2018 - el;
 }
+//function to determine if someone is of full age
+function isFullAge(el){
+	return el >= 18;
+}
 //call function that calculates age
 var ages = arrayCalc(years, calculateAge);
+var fullAges = arrayCalc(ages, isFullAge);
+console.log(fullAges);
 console.log(ages);
 
 
