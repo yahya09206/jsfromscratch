@@ -163,8 +163,45 @@ game();
 				CLOSURES
 ---------------------------------------------- */
 /*
-
+- Inner function always has access to outer function even after outer function has returned.
 */
+function retirement(retirementAge){
+	var a = ' years left until retirement.';
+	return function(yearOfBirth){
+		var age = 2018 - yearOfBirth;
+		console.log((retirementAge - age) + a);
+	}
+}
+var retirementUS = retirement(66);
+retirementUS(1991);
 
+/* ---------------------------------------------- 
+			BIND CALL AND APPLY
+---------------------------------------------- */
+/*
+- Allow you to call a function and set 'this' variable manually
+*/
+var john = {
+	name: 'john',
+	age: 27,
+	job: 'teacher',
+	presentation: function(style, timeOfDay){
+		if(style === 'formal'){
+			console.log('Good' + timeOfDay + ' ladies and gentlemen! I\'m ' + this.name + ' I\'m a ' + this.job + ' and I\'m ' + this.age);
+		}else if(style === 'friendly'){
+			console.log('Hey! What\'s up? I\'m ' + this.name + ' I\'m a ' + this.job + ' and I\'m ' + this.age + ' have a nice ' + this.timeOfDay);
+		}
+	}
+}
+
+var emily = {
+	name: 'Emily',
+	age: 35,
+	job: 'Designer'
+};
+//call function for john
+john.presentation('formal', 'morning');
+
+john.presentation.call(emily, 'friendly', 'afternoon');
 
 
