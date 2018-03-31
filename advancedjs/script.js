@@ -201,7 +201,11 @@ var emily = {
 };
 //call function for john
 john.presentation('formal', 'morning');
-
+//borrow method for emily object from john's method aka call method
 john.presentation.call(emily, 'friendly', 'afternoon');
+//apply method which accepts the params as arrays
+// john.presentation.apply(emily, ['friendly', 'afternoon']);
+//bind method also allows you to set 'this' explicitly. generates copy of method
+
 
 
