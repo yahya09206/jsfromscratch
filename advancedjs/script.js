@@ -15,6 +15,9 @@
 		• each and every object in javascript has a prototype property
 - The constructors prototype property is not the prototype of the constructor itself, its the prototype 
 	of all instances that are created through it
+- New operator
+	• empty object is created
+	• constructor function is called with the arguments specified
 */
 
 //below is how to create using an object literal
@@ -26,7 +29,9 @@ var john = {
 
 //build object using function constructor
 var Person = function(name, yearOfBirth, job){
-	this.name = 'john',
-	this.yearOfBirth = 1991,
-	this.job = 'developer'
+	this.name = name,
+	this.yearOfBirth = yearOfBirth,
+	this.job = job
 }
+//instanciate new object
+var john = new Person('John', 1991, 'Developer');
