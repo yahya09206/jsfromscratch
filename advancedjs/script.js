@@ -205,9 +205,9 @@ john.presentation('formal', 'morning');
 john.presentation.call(emily, 'friendly', 'afternoon');
 //apply method which accepts the params as arrays
 // john.presentation.apply(emily, ['friendly', 'afternoon']);
-//bind method also allows you to set 'this' explicitly. generates copy of method
+//bind method also allows you to set 'this' explicitly. generates copy of method. Preset methods aka currying
 var jobFriendly = john.presentation.bind(john, 'friendly');
-//set second argument seperatly
+//set second argument seperately
 jobFriendly('evening');
 
 
