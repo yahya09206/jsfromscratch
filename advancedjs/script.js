@@ -26,17 +26,14 @@ var john = {
 	yearOfBirth: '1991',
 	job: 'developer'
 };
-
 //build object using function constructor
 var Person = function(name, yearOfBirth, job){
 	this.name = name,
 	this.yearOfBirth = yearOfBirth,
 	this.job = job
 }
-
 //inherit property
 Person.prototype.lastName = 'Smith';
-
 //prototype inheritance
 Person.prototype.calculateAge = function(){
 	console.log(2018 - this.yearOfBirth);
@@ -53,3 +50,31 @@ mark.calculateAge();
 console.log(john.lastName);
 console.log(jane.lastName);
 console.log(mark.lastName);
+
+//Creating objects using object.create method
+var personProto = {
+	calculateAge: function(){
+		console.log(2016 - this.yearOfBirth);
+	}
+};
+//create john object the inefficient way
+var john = Object.create(personProto);
+john.name = 'John';
+john.yearOfBirth = 1991;
+john.job = 'teacher';
+
+var jane = Object.create(personProto, {
+	name: {value: 'Jane'},
+	yearOfBirth: {value: 1991},
+	job: {value: 'Designer'}
+});
+
+
+
+
+
+
+
+
+
+
