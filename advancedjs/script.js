@@ -33,5 +33,16 @@ var Person = function(name, yearOfBirth, job){
 	this.yearOfBirth = yearOfBirth,
 	this.job = job
 }
-//instanciate new object
+
+//prototype inheritance
+Person.prototype.calculateAge = function(){
+	console.log(2018 - this.yearOfBirth);
+}
+//instantiate new object
 var john = new Person('John', 1991, 'Developer');
+var jane = new Person('Jane', 1995, 'Designer');
+var mark = new Person('Mark', 2001, 'Developer');
+//call methods
+john.calculateAge();
+jane.calculateAge();
+mark.calculateAge();
