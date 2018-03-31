@@ -76,10 +76,34 @@ var jane = Object.create(personProto, {
 			FIRST CLASS FUNCTIONS
 ---------------------------------------------- */
 /*
-
+- A function is an isntance of the object type
+- A function behaves like any other object
+- Can store functions in a variable
+- Can pass a function as an argument to another function
+- Can return a function from a function
 */
+//array with years in them
+var years = [1990, 1965, 1937, 1991, 2018];
 
-
+//function that will recieve an array and return a new result array
+function arrayCalc(arr, fn){
+	//create empty array
+	var arrResult = [];
+	//loop over arrays
+	for (var i = 0; i < arr.length; i++) {
+		//push result into empty array
+		arrResult.push(fn(arr[i]));
+	}
+	//return the result array
+	return arrResult;
+}
+//function to calculate age
+function calculateAge(el){
+	return 2018 - el;
+}
+//call function that calculates age
+var ages = arrayCalc(years, calculateAge);
+console.log(ages);
 
 
 
