@@ -16,3 +16,17 @@
 - The constructors prototype property is not the prototype of the constructor itself, its the prototype 
 	of all instances that are created through it
 */
+
+//below is how to create using an object literal
+var john = {
+	name: 'john',
+	yearOfBirth: '1991',
+	job: 'developer'
+};
+
+//build object using function constructor
+var Person = function(name, yearOfBirth, job){
+	this.name = 'john',
+	this.yearOfBirth = 1991,
+	this.job = 'developer'
+}
