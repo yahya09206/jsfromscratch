@@ -34,6 +34,9 @@ var Person = function(name, yearOfBirth, job){
 	this.job = job
 }
 
+//inherit property
+Person.prototype.lastName = 'Smith';
+
 //prototype inheritance
 Person.prototype.calculateAge = function(){
 	console.log(2018 - this.yearOfBirth);
@@ -46,3 +49,7 @@ var mark = new Person('Mark', 2001, 'Developer');
 john.calculateAge();
 jane.calculateAge();
 mark.calculateAge();
+//log new lastname
+console.log(john.lastName);
+console.log(jane.lastName);
+console.log(mark.lastName);
